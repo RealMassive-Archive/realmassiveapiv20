@@ -4,55 +4,14 @@ info:
   contact:
     email: dev@realmassive.com
   description: |
-    RealMassive API Documentation Layout
-
     # Introduction
-    Our mission at RealMassive is to open up Commercial Real Estate (CRE) data. We've developed the first fully open CRE API to help application developers build modern apps. Our API gives you real-time access to our nationwide database of CRE listings and related information about this $15.2 trillion industry.
+    This is the RealMassive v2.0 API Reference. Our previous version has been fully turned down.
 
-    With the RealMassive API you can:
-    * Programmatically upload, manage, and syndicate your organization's inventory and availabilities.
-    * Quickly and flexibly search tens of thousands of listings from CRE brokerages nationwide.
-    * Create, share, and manage your market surveys or favorites lists.
-
-    Our documentation is broken down into three sections:
-    1. Quickstart: Make your first API calls in less than 5 minutes.
-    1. Detailed Guides: Commonly encountered tasks of varying complexity explained.
-    1. API Reference: In-depth detail about each of the 400+ endpoints.
-
-    Pro Tip: Get the latest API updates by joining the [RealMassive API Announce](https://groups.google.com/forum/#!forum/rm-api-announce) email list.
-
-    # Five Minute Quickstart
-    ## Basic Concepts
-    The RealMassive API is a [RESTful API](http://en.wikipedia.org/wiki/Representational_state_transfer) that communicates over the [HTTP protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) and adheres to the [JSON API](http://jsonapi.org/) specification.
-    * **Root Endpoints**:
-      - **Staging/Testing**: [https://rm-api-sandbox.appspot.com/](https://rm-api-sandbox.appspot.com/)
-      - **Production**: [https://api.realmassive.com/](https://api.realmassive.com/)
-    * **Authentication Required for all API Requests**:
-      - Authenticate requests by setting the HTTP "Authorization" header to "Bearer YOUR-ACCESS-TOKEN":
-
-        ```
-        > curl -XPOST -H "Authorization: Bearer YOUR-ACCESS-TOKEN" https://rm-api-sandbox.appspot.com/spaces?page[limit]=1
-        ```
-
-      - To get your access token, create a user on [rm-api-sandbox](https://rm-api-sandbox.appspot.com/) and/or a production [realmassive.com](https://api.realmassive.com/) and login that user.
-      - To login your user, using basic auth, POST your credentials to the `/login` route on the proper root endpoint (ie. sandbox or production). For example:
-
-          ```
-          > curl -XPOST -i -u 'testuser1234:abcd1234!' https://rm-api-sandbox.appspot.com/login
-          ```
-
-      Our reponse to your successful login request is a JSON payload containing your access token. Store and send us that token in the Authorization header as mentioned above.
-      - You can now make authenticated calls to our API. This call should return successfully:
-
-        ```
-        > curl -XPOST -H "Authorization: Bearer YOUR-ACCESS-TOKEN" https://rm-api-sandbox.appspot.com/spaces?page[limit]=1
-        ```
-
-
-    ## Making your First API Calls
-
-    # Detailed Guides
-    # API References
+    If you need help getting started, please see our other resources:
+    - [Developer's Center](realmassive.com/developer-center/) - our main portal for developers
+    - [Quickstart Guide](https://realmassive.github.io/realmassive.github.io/index.html) - make your first API calls
+    - [SDKs and Code Samples](https://realmassive.github.io/realmassive.github.io/sdk_code_examples.html) - more examples, more languages
+    - [RealMassive API Announcements Email Group](https://groups.google.com/forum/#!forum/rm-api-announce) - low volume, email list for important API announcements
 
   termsOfService: 'https://www.realmassive.com/terms-of-service/'
   title: RealMassive API
